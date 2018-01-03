@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid *ngIf="weather">
+    <ion-row>
+      <ion-col width=50 offset=25>
+        <h2>{{weather.display_location.full}}</h2>
+        <div><img src = '{{weather.icon_url}}'></div>
+        <h3>{{weather.weather}}</h3>
+        <h1>{{weather.temp_c}}&deg;</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <strong>Temp:</strong> {{weather.temperature_string}}
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
